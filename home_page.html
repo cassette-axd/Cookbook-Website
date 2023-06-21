@@ -3,36 +3,70 @@
         <title>Home Page</title>
 
         <style>
-            body {
+            * {
                 margin: 0;
+                padding: 0;
             }
 
             .topnav {
-                overflow: hidden;
-                background-color: #333;
+                height: 50px;
+                width: 100%;
+                background: rgb(56, 55, 55);
             }
 
-            .topnav a {
+            .topnav ul {
+                list-style: none;
+            }
+
+            .topnav ul li {
                 float: left;
-                color: #f2f2f2;
+                width: 140px;
+                height: 50px;
                 text-align: center;
-                padding: 18px 18px;
+                line-height: 50px;
+            }
+
+            .topnav ul li a {
+                color: white;
+                display: block;
                 text-decoration: none;
-                font-size: 17px;
             }
 
             .topnav a:hover {
-                background-color: #ddd;
-                color: black;
+                background-color: rgb(7, 219, 216);
+                color: white;
+                transition: 700ms ease;
             }
 
-            .topnav a.active {
+            /* .topnav a.active {
                 background-color: #48bda6;
                 color: white;
+            } */
+
+            .dropdown-menu ul li {
+                background: rgb(56, 55, 55);
+                display: none;
+                animation: animate ls ease;
+            }
+
+            .dropdown-menu ul li a {
+                color: #fff;
+            }
+
+            .dropdown-menu ul li a:hover {
+                background: rgb(7, 219, 216);
+                color: white;
+            }
+
+            .topnav ul li:hover ul li {
+                display: block;
             }
 
             body {
                 background: whitesmoke;
+                background-position: center center;
+                height: 100vh;
+                padding: 50px;
                 ::-webkit-scrollbar {
                 width: 10px;
                 }
@@ -51,12 +85,20 @@
                     background: #555; 
                 }
             }
+
         </style>
     </head>
     <body>
         <div class="topnav">
-            <a class="active" href="">About</a>
-            <a href="">Help</a>
+           <ul>
+                <li class="dropdown-menu"><a href="#">About</a>
+                    <ul>
+                        <li><a href="#">The Author</a></li>
+                        <li><a href="#">The Website</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Help</a></li>
+           </ul>
         </div>
         <!-- <h1>Casey Reyes</h1> -->
     </body>
