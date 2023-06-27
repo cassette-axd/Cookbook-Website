@@ -67,6 +67,17 @@
                 display: block;
             }
 
+            .container {
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                font-weight: bold;
+                position:absolute;
+                top: 36%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 70px;
+            }
+
             body {
                 background: whitesmoke;
                 background-position: center center;
@@ -92,6 +103,7 @@
             }
 
         </style>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="topnav">
@@ -105,6 +117,13 @@
                 <li><a href="">Help</a></li>
            </ul>
         </div>
-        <!-- <h1>Casey Reyes</h1> -->
+        <div class="container">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="sessions">AM</span>
+        </div>
     </body>
 </html>
