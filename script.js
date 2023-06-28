@@ -3,9 +3,10 @@ function displayTime() {
     var hrs = dateTime.getHours();
     var mins = dateTime.getMinutes();
     var secs = dateTime.getSeconds();
-    var sessions = document.getElementById('sessions');
+    let period = 'AM';
 
     if (hrs > 12) {
+        period = 'PM';
         hrs = hrs - 12;
     }
 
@@ -23,16 +24,10 @@ function displayTime() {
         secs = "0"+ secs;
     }
 
-    if (hrs >= 12) {
-        sessions.innerHTML = 'PM';
-    }
-    else {
-        sessions.innerHTML = 'AM';
-    }
-
     document.getElementById('hours').innerHTML = hrs;
     document.getElementById('minutes').innerHTML = mins;
     document.getElementById('seconds').innerHTML = secs;
+    document.getElementById('sessions').innerHTML = period;
 
 }
 setInterval(displayTime, 10);
