@@ -5,6 +5,7 @@ function displayTime() {
     var secs = dateTime.getSeconds();
     let period = 'AM';
     let clock = document.querySelector('.container');
+    clock.style.color = 'white';
 
     if (hrs > 12) {
         period = 'PM';
@@ -24,21 +25,24 @@ function displayTime() {
     if (secs < 10) {
         secs = "0"+ secs;
     }
-    if ((hrs >= 6 && period == 'PM') || (hrs >= 0 && period == 'AM')) {
+
+    // check night
+    if (hrs >= 6 && period == 'PM') {
         document.body.style.backgroundImage = "url('summer_night.jpeg')";
-        clock.style.color = 'white';
     }
-    else if ((hrs >= 6 && period == 'AM') || (hrs >= 0 && period == 'PM')) {
+    else if (hrs >= 0 && period == 'AM') {
+        if (hrs < 6) {
+            document.body.style.backgroundImage = "url('summer_night.jpeg')";
+        }
+    }
+    else {
         document.body.style.backgroundImage = "url('summer_day.jpg')";
-        clock.style.color = 'white';
     }
 
     document.getElementById('hours').innerHTML = hrs;
     document.getElementById('minutes').innerHTML = mins;
     document.getElementById('seconds').innerHTML = secs;
     document.getElementById('sessions').innerHTML = period;
-
-    
 
 }
 setInterval(displayTime, 10);
