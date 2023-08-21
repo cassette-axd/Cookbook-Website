@@ -44,10 +44,8 @@ function displayTime() {
     if (hrs >= 6 && period == 'PM') {
         document.body.style.backgroundImage = "url('summer_night.jpeg')";
     }
-    else if (hrs >= 0 && period == 'AM') {
-        if (hrs < 6) {
-            document.body.style.backgroundImage = "url('summer_night.jpeg')";
-        }
+    else if ((hrs >= 0 && hrs < 6) && period == 'AM') {
+        document.body.style.backgroundImage = "url('summer_night.jpeg')";
     }
     else {
         document.body.style.backgroundImage = "url('summer_day.jpg')";

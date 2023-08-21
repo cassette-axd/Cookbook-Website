@@ -87,6 +87,43 @@
                 transform: translate(-50%, -50%);
                 font-size: 24px;
             }
+            .search {
+                position:absolute;
+                top: 50%;
+                left: 21%;
+                width: 100%;
+                min-height: 100vh;
+                padding: 5%;
+                background-position: center;
+                background-size: cover;
+                /* display: flex;
+                align-items: center;
+                justify-content: center; */
+            }
+            .search-bar {
+                width: 100%;
+                max-width: 700px;
+                background: white;
+                display: flex;
+                align-items: center;
+                border-radius: 60px;
+                padding: 10px 20px;
+            }
+            .search-bar input {
+                background: transparent;
+                flex: 1;
+                border: 0;
+                outline: none;
+                padding: 24px 20px;
+                font-size: 20px;
+                color: black;
+            }
+            .search-bar button {
+                border: 0;
+                background-color: white;
+                background: white;
+                cursor: pointer;
+            }
 
             body {
                 background-image: url(summer_day.jpg);
@@ -142,6 +179,14 @@
             <span id="day">00</span>
             <span> </span>
             <span id="year">0000</span>
+        </div>
+        <div class="search">
+            <form action="https://google.com/search" method="get" class="search-bar">
+                <input type="text" placeholder="search recipes" name="q">
+                <button type="submit">
+                    <img src="search.png">
+                </button>
+            </form>
         </div>
     </body>
 </html>
