@@ -128,11 +128,10 @@
                 position:absolute;
                 left: 42%;
                 top: 78%;
-                display: flex;
+                display: inline-flex;
                 height: 50px;
                 width: 250px;
                 padding: 0;
-                background: #48bda6;
                 border: 0;
                 outline: none;
                 border-radius: 5px;
@@ -140,7 +139,15 @@
                 font-family: Copperplate, Papyrus, fantasy;
                 font-size: 16px;
                 font-weight: 500;
+                background: #57e1c6;
                 cursor: pointer;
+            }
+
+            .button_text {
+                display: inline-flex;
+                align-items: center;
+                padding: 0 24px;
+                font-size: 24px;
             }
 
             body {
@@ -183,7 +190,9 @@
                 <li><a href="">Help</a></li>
            </ul>
         </div>
-        <button class="generate_recipes">Find Recipes</button>
+        <button class="generate_recipes">
+            <span class="button_text">Generate Recipes</span>
+        </button>
         <script src="location.js"></script>
         <div class="container">
             <span id="hours">00</span>
