@@ -41,14 +41,14 @@ function displayTime() {
     }
 
     // check night
-    if (hrs >= 6 && period == 'PM') {
+    if (hrs >= 6 && period === 'PM') {
         document.body.style.backgroundImage = "url('summer_night.jpeg')";
     }
-    else if ((hrs >= 0 && hrs < 6) && period == 'AM') {
+    else if ((hrs >= 0 && hrs < 6) && period === 'AM') {
         document.body.style.backgroundImage = "url('summer_night.jpeg')";
     }
     else {
-        document.body.style.backgroundImage = "url('summer_day.jpg')";
+        document.body.style.backgroundImage = "url('summer_day.jpeg')";
     }
 
     // change the month to word format
